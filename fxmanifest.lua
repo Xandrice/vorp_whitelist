@@ -4,12 +4,11 @@ rdr3_warning 'I acknowledge that this is a prerelease build of RedM, and I am aw
 game 'rdr3'
 
 author 'Aurel'
-version '1.0.1'
+version '1.0.2'
 
 server_only 'yes'
 server_scripts {
     'config.js',
-    'commands.js',
     'discord.js',
     'http.js',
     'main.js'
