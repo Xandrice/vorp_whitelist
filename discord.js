@@ -1,3 +1,9 @@
+/**
+ * @author Nolosha Roleplay
+ * @license MIT
+ * Fuck Lawless.
+ */
+
 const { Client, Intents } = require('discord.js');
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MEMBERS] });
@@ -9,7 +15,7 @@ client.once('ready', () => {
 });
 
 function checkDiscordPerms(discordId, deferrals) {
-    // Getting Discord Guild (FokLawless)
+    // Getting Discord Guild
     let guild = client.guilds.resolve(config.guild);
     
     // Checking if member exists in guild 
@@ -18,7 +24,7 @@ function checkDiscordPerms(discordId, deferrals) {
             let isWhitelisted = false;
             
             if (config.checkRole) {
-                // Checking if member has one of the whitelisted roles (FokLawless)
+                // Checking if member has one of the whitelisted roles
                 config.roles.forEach(role => {
                     if (member.roles.cache.has(role)) {
                         isWhitelisted = true;

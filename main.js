@@ -1,3 +1,9 @@
+/**
+ * @author Nolosha Roleplay
+ * @license MIT
+ * Fuck Lawless.
+ */
+
 const URLSearchParams = require('@ungap/url-search-params');
 const Sha256 = require('crypto-js/sha256');
 
@@ -99,7 +105,7 @@ on('discordwl:connect', player => {
                             });
                         };
 
-                        // Prevent connection timeout by refreshing card (FokLawless)
+                        // Prevent connection timeout by refreshing card
                         presentCard();
                         let presentCardInterval = setInterval(presentCard, 20000);
 

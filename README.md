@@ -1,4 +1,4 @@
-Whitelist discord for RedM by Nolosha for vorp
+Whitelist discord for RedM by Nolosha Roleplay for VORP
 
 ![image](https://user-images.githubusercontent.com/93606636/142051884-41164b7c-e451-4dfd-977f-0fc68ad0655d.png)
 

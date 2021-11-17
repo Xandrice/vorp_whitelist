@@ -1,3 +1,9 @@
+/**
+ * @author Nolosha Roleplay
+ * @license MIT
+ * Fuck Lawless.
+ */
+
 const express = require('express');
 const fetch = require('node-fetch');
 const app = express();
