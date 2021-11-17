@@ -45,11 +45,17 @@ let playersWaiting = {};
 on('playerConnecting', (name, setKickReason, deferrals) => {
     deferrals.defer();
 
-    playersConnecting[global.source] = deferrals;
+    let player = global.source;   
+    playersConnecting[player] = deferrals;
+
+    if (!config.connectQueue) {
+        emit('discordwl:connect', player);
+    }
 });
 
 on('discordwl:connect', player => {
     let deferrals = playersConnecting[player];
+    delete playersConnecting[player];
 
     setTimeout(() => {
         deferrals.update("Check whitelist...");
