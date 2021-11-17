@@ -20,12 +20,9 @@ Create an application on the [Discord Developer Panel](https://discord.com/devel
 - clientId : "Your OAuth2 client id"
 - clientSecret : "Your OAuth2 client secret"
 - token : "Your bot token"
-
 - guild : "Your discord server ID" ([how to find a discord ID](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-))
 - roles : an array containing the roles ID allowed (ex: `["00000000000000", "11111111111111"]`)
-
 - redirectUri : `http://[your server IP]:7790/discord`
-
 - checkRole : set to `true` to check if the player has one of the whitelisted roles. Set to `false` to only check for the player presence on your Discord server.
 
 # How it works
