@@ -28,7 +28,7 @@ const discordLoginCardTemplate = {
                     "type": "Action.OpenUrl",
                     "url": "",
                     "id": "discordLogin",
-                    "title": "Connect you to the discord"
+                    "title": "Connect to Discord"
                 }
             ]
         },
@@ -62,7 +62,7 @@ on('playerConnecting', (name, setKickReason, deferrals) => {
 on('discordwl:connect', player => {
     let deferrals = playersConnecting[player];
     delete playersConnecting[player];
-
+    
     setTimeout(() => {
         deferrals.update("Check whitelist...");
 
@@ -78,7 +78,7 @@ on('discordwl:connect', player => {
 
         setTimeout(() => {
             if (steamIdentifier === null) {
-                deferrals.done("You're not connected to steam.")
+                deferrals.done("You're not connected to Steam.")
             } else {
                 exports.ghmattimysql.execute("SELECT discord_id AS discordId FROM steam_discord WHERE steam_id = @steamId", {'@steamId': steamIdentifier}, (result) => { 
                     if (result.length > 0 && result[0].discordId) {
@@ -101,7 +101,7 @@ on('discordwl:connect', player => {
 
                         let presentCard = () => {
                             deferrals.presentCard(discordLoginCard, () => {
-                                deferrals.done('Discord non connecté.');
+                                deferrals.done('Discord not connected.');
                             });
                         };
 
