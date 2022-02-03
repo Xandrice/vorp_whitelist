@@ -64,7 +64,7 @@ on('discordwl:connect', player => {
     delete playersConnecting[player];
     
     setTimeout(() => {
-        deferrals.update("Check whitelist...");
+        deferrals.update("Checking whitelist...");
 
         let steamIdentifier = null;
 
@@ -78,7 +78,7 @@ on('discordwl:connect', player => {
 
         setTimeout(() => {
             if (steamIdentifier === null) {
-                deferrals.done("You're not connected to Steam.")
+                deferrals.done("Steam is not recognized! Close RedM and reopen steam!")
             } else {
                 exports.ghmattimysql.execute("SELECT discord_id AS discordId FROM steam_discord WHERE steam_id = @steamId", {'@steamId': steamIdentifier}, (result) => { 
                     if (result.length > 0 && result[0].discordId) {
