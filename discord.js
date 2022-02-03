@@ -33,12 +33,12 @@ function checkDiscordPerms(discordId, deferrals) {
             }
 
             if (config.checkRole && !isWhitelisted) {
-                deferrals.done("You're not whitelist");
+                deferrals.done("You're not whitelisted!");
             } else {
                 deferrals.done();
             }
         })
         .catch(err => {
-            deferrals.done("You're not whitelist connected : https://yourdiscord");
+            deferrals.done("You're not whitelisted, join the discord at: https://discord.gg/syncounty");
         });
 }
